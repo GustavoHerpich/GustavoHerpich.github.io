@@ -1,0 +1,39 @@
+schema: spec-driven
+
+# Project context (optional)
+# Add only constraints that should guide OpenSpec artifacts and workflows.
+# Include constraints an agent cannot infer by reading the code.
+context: |
+  No confidential or proprietary employer information in content, screenshots or code samples.
+  No secrets in the repo. Free hosting and free tooling only.
+  Specs use SHALL/MUST with #### Scenario: blocks.
+  Tasks are small, checkable and traceable to a requirement.
+  Locales: pt-BR (default, /) and en (//en/).
+  One OpenSpec change per branch and PR: branch change/<change-id>.
+  Commits follow Conventional Commits plus trailers defined in AGENTS.md.
+  All specs, code and repo docs are written in English. Site copy is bilingual.
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+rules:
+  proposal:
+    - Keep proposals under 500 words
+    - Always state what is out of scope
+    - No confidential employer info
+  tasks:
+    - Break tasks into chunks of max 2 hours
+    - Tasks must be small, checkable and traceable to a requirement
+    - Verify with pnpm verify before ticking a task
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+operations:
+  apply:
+    guidance:
+      - Keep test summaries concise
+      - Run pnpm verify before ticking a task
+  archive:
+    guidance:
+      - Summarize the archive outcome before finishing
+      - Archive only after merge
