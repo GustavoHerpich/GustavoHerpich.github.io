@@ -21,8 +21,8 @@ The CI workflow SHALL run on every pull request and SHALL execute verify, the e2
 ### Requirement: Accessibility gate
 The e2e suite SHALL fail when any page has an axe violation with impact serious or critical.
 
-#### Scenario: Missing alt text
-- **WHEN** a page contains an image without an accessible name
+#### Scenario: Blocking violation found
+- **WHEN** axe reports a violation with impact serious or critical on a tested page
 - **THEN** the e2e suite fails
 
 ### Requirement: Quality budgets

@@ -6,6 +6,9 @@
 - **GitHub Pages over Cloudflare/Vercel.** Zero extra accounts and free. Trade-off: no preview deploys per PR; acceptable for v1.
 - **Lighthouse CI with fixed budgets.** Makes quality claims verifiable. Trade-off: flaky scores on CI runners; mitigated by running 3 times and using the median.
 - **Repo name `GustavoHerpich.github.io`.** Serves at the root so no `base` path handling is needed.
+- **Pinned toolchain.** Node LTS via `.nvmrc` and `engines`, pnpm via the `packageManager` field; CI reads both. Trade-off: upgrades are explicit changes.
+- **E2E and Lighthouse CI run against `astro preview`** of the production build, which avoids extra dependencies.
+- **Lighthouse CI runs 3 times per URL (`numberOfRuns: 3`) and uses the median.**
 
 ## Dependencies introduced
 astro, typescript, eslint (+ astro plugin), prettier (+ astro plugin), vitest, @playwright/test, @axe-core/playwright, @lhci/cli.
