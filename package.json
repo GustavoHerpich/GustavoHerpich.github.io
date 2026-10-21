@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "gustavoherpich.github.io",
+
+  "version": "0.0.1",
+  "scripts": {
+    "astro": "astro",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "astro check",
+    "e2e": "playwright test",
+    "lhci": "lhci autorun --config=.lhcirc.json",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": ">=12.0.0"
+  },
+  "packageManager": "pnpm@12.11.2",
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@axe-core/playwright": "^4.14.0",
+    "@eslint/js": "^10.0.1",
+    "@lhci/cli": "0.15.1",
+    "@playwright/test": "^1.64.1",
+    "astro": "^7.4.0",
+    "eslint": "^10.13.0",
+    "eslint-plugin-astro": "^3.2.1",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^5.0.5"
+  }
+}

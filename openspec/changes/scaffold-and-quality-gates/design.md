@@ -11,4 +11,4 @@
 - **Lighthouse CI runs 3 times per URL (`numberOfRuns: 3`) and uses the median.**
 
 ## Dependencies introduced
-astro, typescript, eslint (+ astro plugin), prettier (+ astro plugin), vitest, @playwright/test, @axe-core/playwright, @lhci/cli.
+astro, typescript, eslint (+ astro plugin), prettier (+ astro plugin), vitest, @playwright/test, @axe-core/playwright, @lhci/cli, typescript-eslint, eslint-plugin-astro, @eslint/js, globals, prettier-plugin-astro, @astrojs/check.

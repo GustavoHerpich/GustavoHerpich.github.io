@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# astro
+.astro/
+dist/
+
+# tests and reports
+playwright-report/
+test-results/
+coverage/
+.lighthouseci/
+
+# env and secrets
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+pnpm-debug.log*
+
+# OS and editor
+.DS_Store
+Thumbs.db
