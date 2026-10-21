@@ -1,18 +1,22 @@
 ## ADDED Requirements
 
 ### Requirement: Typed project entries
-Each project SHALL be a content-collection entry validated by a schema with title, summary, stack, repository URL, optional demo URL, status (`active`, `maintained` or `planned`), `featured` flag, `order` and at most three highlights.
+Each project SHALL be a content-collection entry validated by a schema with title, summary, stack, repository URL, optional demo URL, optional package URL, status (`active` or `maintained`), `featured` flag, `order` and at most three highlights. All URLs SHALL be valid https URLs.
 
 #### Scenario: Invalid entry
-- **WHEN** an entry lacks a required field or has more than three highlights
-- **THEN** the production build fails
+- **WHEN** an entry lacks a required field, has more than three highlights, has an invalid status or has a URL that is not a valid https URL
+- **THEN** the schema rejects it and the production build fails
 
 ### Requirement: Featured selection
-The home page SHALL show featured projects sorted by `order`, and SHALL NOT feature projects with status `planned`.
+The home page SHALL show only projects with `featured` true, sorted by `order` ascending, with ties broken by title.
 
-#### Scenario: Planned project
-- **WHEN** a project has status `planned` and `featured` true
+#### Scenario: Non-featured project
+- **WHEN** a project has `featured` false
 - **THEN** it is excluded from the featured list
+
+#### Scenario: Order
+- **WHEN** featured projects have different `order` values, or equal values with different titles
+- **THEN** they are listed by `order` ascending and then by title
 
 ### Requirement: Flagship library
 The `br-docs-utils` project SHALL be featured and SHALL link to its npm package and its GitHub repository.

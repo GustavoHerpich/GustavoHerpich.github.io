@@ -8,21 +8,28 @@ context: |
   No secrets in the repo. Free hosting and free tooling only.
   Specs use SHALL/MUST with #### Scenario: blocks.
   Tasks are small, checkable and traceable to a requirement.
-  Locales: pt-BR (default, /) and en (//en/).
+  Locales: pt-BR (default, /) and en (/en/).
   One OpenSpec change per branch and PR: branch change/<change-id>.
   Commits follow Conventional Commits plus trailers defined in AGENTS.md.
   All specs, code and repo docs are written in English. Site copy is bilingual.
+  Personal facts (bio, claims, metrics, links, CV) come from the human. Never invent them.
 
 # Per-artifact rules (optional)
 # Add custom rules for specific artifacts.
 rules:
   proposal:
     - Keep proposals under 500 words
-    - Always state what is out of scope
+    - Always include an "Out of scope" section
     - No confidential employer info
+  specs:
+    - Every requirement uses SHALL or MUST and has at least one scenario
+    - Every scenario can be verified by a named unit test, e2e test, CI behavior or human check
+  design:
+    - Record every new dependency and its trade-off before implementation
   tasks:
     - Break tasks into chunks of max 2 hours
     - Tasks must be small, checkable and traceable to a requirement
+    - Tasks only a human can do go under a "(human)" section
     - Verify with pnpm verify before ticking a task
 
 # Per-operation guidance (optional)
@@ -31,6 +38,7 @@ rules:
 operations:
   apply:
     guidance:
+      - Load the skills named in AGENTS.md before coding
       - Keep test summaries concise
       - Run pnpm verify before ticking a task
   archive:

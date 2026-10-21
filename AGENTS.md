@@ -11,6 +11,7 @@
 8. Finish every session with a report: files changed, tests added, `pnpm verify` result, open questions.
 9. Do not edit proposal.md, design.md or spec files, and do not add, remove or reword tasks. In tasks.md you may only tick checkboxes. If an artifact needs a change, stop and propose the edit to the human.
 10. Tasks under a section marked "(human)" are never implemented by the agent. Skip them and mention them in the report.
+11. Before writing code, load the relevant skills with the skill tool: typescript-strict, clean-code and architecture-layers for any code; astro-static-site for .astro files; testing-strategy before writing or running tests; css-a11y-performance for markup or CSS; design-patterns-pragmatic when designing a module. Load openspec-authoring when drafting or auditing artifacts. State in the report which skills you loaded.
 
 ### Code style
 - TypeScript strict, no `any`. Prefer small pure functions. No abstraction without two real uses.

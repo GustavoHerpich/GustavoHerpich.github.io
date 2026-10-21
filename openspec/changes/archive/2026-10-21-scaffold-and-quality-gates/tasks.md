@@ -9,11 +9,11 @@
 - [x] 2.2 Lighthouse CI config with budgets (performance >= 0.90; accessibility, best-practices, seo >= 0.95). run against `astro preview` of the production build, `numberOfRuns: 3`, median score
 
 ## 3. CI/CD
-- [ ] 3.1 Workflow `ci.yml` on pull_request: frozen-lockfile install, verify, e2e, lhci
-- [ ] 3.2 Workflow `deploy.yml` on push to main: build and deploy to GitHub Pages
+- [x] 3.1 Workflow `ci.yml` on pull_request: frozen-lockfile install, verify, e2e, lhci
+- [x] 3.2 Workflow `deploy.yml` on push to main: build and deploy to GitHub Pages
 - [x] 3.3 README with CI badge, run instructions and a link to AI-USAGE.md
 
 ## 4. Verification (human)
-- [ ] 4.1 Open a PR with an intentionally failing test and confirm CI blocks it; then revert
-- [ ] 4.2 Confirm the site is live on GitHub Pages
-- [ ] 4.3 Enable branch protection on `main` requiring the CI check to pass before merge (after the first CI run)
+- [x] 4.1 Open a PR with an intentionally failing test and confirm CI blocks it; then revert
+- [x] 4.2 Confirm the site is live on GitHub Pages
+- [x] 4.3 Enable branch protection on `main` requiring the CI check to pass before merge (after the first CI run)

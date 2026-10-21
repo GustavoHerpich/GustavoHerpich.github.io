@@ -22,6 +22,10 @@ The page SHALL list archived OpenSpec changes, read from the repository at build
 - **WHEN** an archive folder name does not match the expected date format
 - **THEN** the entry is listed without a date and the build succeeds
 
+#### Scenario: Title from the proposal
+- **WHEN** an archived change has a proposal whose first heading is `# Change: <title>`
+- **THEN** the list shows that title, and shows the change id when the heading is missing
+
 ### Requirement: Discoverability
 Every page footer SHALL link to the workflow page, and the README SHALL contain a section linking to the specs and to `AI-USAGE.md`.
 
